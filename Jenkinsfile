@@ -19,8 +19,8 @@ pipeline {
             steps {
                 print "Building Docker image..."
                 script {
-                    sh "/usr/local/bin/docker pull --disable-content-trust=false node:20-alpine"
-                    sh "DOCKER_BULIDKIT=0 /usr/local/bin/docker build -t csi401-frontend"
+                    sh "/usr/local/bin/docker pull --disable-content-trust=false node:18"
+                    sh "DOCKER_BUILDKIT=0 /usr/local/bin/docker build -t csi401-frontend"
                 }
                 print "Docker Image to Running Container"
                 script {

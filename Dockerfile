@@ -1,5 +1,5 @@
 # ใช้ Node.js เป็น base image
-FROM node:20-alpine
+FROM node:18
 
 # ตั้ง working directory ภายใน container
 WORKDIR /app
