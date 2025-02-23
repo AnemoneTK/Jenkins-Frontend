@@ -19,8 +19,7 @@ pipeline {
             steps {
                 echo "Building Docker image..."
                 script {
-                    // Pull base image (node:18)
-                    sh "docker pull node:18"
+                    sh "docker pull node:20-alpine"
                     // Build the Docker image using Dockerfile in the context
                     sh "DOCKER_BUILDKIT=0 docker build -t csi401-frontend ."
                 }
